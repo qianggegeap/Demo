@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Demo</string>
+
+
+    <!--home-->
+    <string name="text_registration_documents">文件登记</string>
+    <string name="text_maintenance">维护中...</string>
+</resources>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/include_title_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp">
+
+        <LinearLayout
+            android:id="@+id/registration_documents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/icon_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    style="@style/text_style_wrap"
+                    android:layout_alignRight="@id/icon_1"
+                    android:background="@drawable/no_read_msg_count"
+                    android:padding="7dp"
+                    android:text="1" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text_style_wrap"
+                android:layout_marginTop="5dp"
+                android:text="@string/text_registration_documents" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/maintenance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                style="@style/text_style_wrap"
+                android:layout_marginTop="5dp"
+                android:text="@string/text_maintenance" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="25dp"
+            android:background="@android:color/holo_green_light" />
+
+        <TextView
+            style="@style/text_style_wrap"
+            android:layout_marginLeft="15dp"
+            android:text="统计"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_briefing_area_bg">
+
+            <ImageView
+                android:id="@+id/icon_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/icon_3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/inspection_record_percentage"
+                    style="@style/text_style_wrap"
+                    android:text="90%"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/text_style_wrap"
+                    android:text="本月检修记录"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/to_repair_count"
+                    style="@style/text_style_wrap"
+                    android:text="报修：" />
+
+                <TextView
+                    android:id="@+id/repaired_count"
+                    style="@style/text_style_wrap"
+                    android:text="修复：" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_briefing_area_bg">
+
+            <ImageView
+                android:id="@+id/icon_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/icon_4"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/repired_percentage"
+                    style="@style/text_style_wrap"
+                    android:text="90%"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/text_style_wrap"
+                    android:text="本月检修记录"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/plan_repair_count"
+                    style="@style/text_style_wrap"
+                    android:text="计划检修：" />
+
+                <TextView
+                    android:id="@+id/actual_repaired_count"
+                    style="@style/text_style_wrap"
+                    android:text="实际检修：" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
